@@ -11,11 +11,15 @@ struct TypesOfView: View {
     var body: some View {
         NavigationView {
             List {
+                Text("Fetch photos of:")
+                    .font(.largeTitle)
+                    .bold()
+                    .foregroundColor(.blue)
                 NavigationLink(destination: AllDogsView(typeOfView: .allDogs)) {
                     Text("All Dogs")
                 }
                 NavigationLink(destination: AllDogsView(typeOfView: .numberOfDogs(number: 3))) {
-                    Text("Random Dog")
+                    Text("3 Random Dogs")
                 }
             }
         }

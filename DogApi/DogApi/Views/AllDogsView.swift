@@ -22,7 +22,7 @@ struct AllDogsView: View {
     var body: some View {
         VStack {
             if self.dogImageList.isLoading {
-                Text("Loading...")
+                LoadingView()
             } else {
                 if let images = self.dogImageList.images {
                     ScrollView {
@@ -31,13 +31,31 @@ struct AllDogsView: View {
                             ForEach(0...images.count-1, id: \.self) { index in
                                 Image(uiImage: images[index])
                                     .resizable()
-                                    .aspectRatio(contentMode: .fit)
                                     .frame(width: imageWidth, height: imageWidth)
+                                    .aspectRatio(contentMode: .fit)
                             }
                         }
                     }
                 }
             }
         }.onAppear(perform: self.dogImageList.getDogApiResponse)
+            .navigationTitle("Photos of Dogs")
+    }
+}
+
+
+struct LoadingView: View {
+    @State private var isAnimating: Bool = false
+
+    var body: some View {
+        Circle()
+            .trim(from: 0, to: 0.7)
+            .stroke(lineWidth: 4)
+            .frame(width: 50, height: 50)
+            .rotationEffect(.degrees(isAnimating ? 360 : 0))
+            .animation(Animation.linear(duration: 1).repeatForever(autoreverses: false))
+            .onAppear {
+                self.isAnimating = true
+            }
     }
 }
