@@ -6,13 +6,23 @@
 //
 
 import SwiftUI
+enum TypesOfViews {
+    case allDogs
+    case random
+    case numberOfDogs(number: Int)
+}
 
 struct AllDogsView: View {
-    @ObservedObject var dogImageList = DogState()
+    @ObservedObject var dogImageList : DogState
+    
+    init(typeOfView: TypesOfViews) {
+        self.dogImageList = DogState(typeOfView: typeOfView)
+    }
+    
     var body: some View {
         VStack {
             if self.dogImageList.isLoading {
-                
+                Text("Loading...")
             } else {
                 if let images = self.dogImageList.images {
                     ScrollView {
@@ -29,11 +39,5 @@ struct AllDogsView: View {
                 }
             }
         }.onAppear(perform: self.dogImageList.getDogApiResponse)
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        AllDogsView()
     }
 }

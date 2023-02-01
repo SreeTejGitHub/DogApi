@@ -15,6 +15,7 @@
 		3AADC3EB29834F740056ACDE /* DogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AADC3EA29834F740056ACDE /* DogModel.swift */; };
 		3AADC3F02983629C0056ACDE /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AADC3EF2983629C0056ACDE /* ErrorModel.swift */; };
 		3AADC3F229836B200056ACDE /* DogState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AADC3F129836B200056ACDE /* DogState.swift */; };
+		3AADC3F7298618AE0056ACDE /* TypesOfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AADC3F6298618AE0056ACDE /* TypesOfView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3AADC3EA29834F740056ACDE /* DogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogModel.swift; sourceTree = "<group>"; };
 		3AADC3EF2983629C0056ACDE /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		3AADC3F129836B200056ACDE /* DogState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogState.swift; sourceTree = "<group>"; };
+		3AADC3F6298618AE0056ACDE /* TypesOfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesOfView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				3AADC3D929834DB50056ACDE /* AllDogsView.swift */,
+				3AADC3F6298618AE0056ACDE /* TypesOfView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				3AADC3DA29834DB50056ACDE /* AllDogsView.swift in Sources */,
 				3AADC3E929834E690056ACDE /* ServiceLayer.swift in Sources */,
 				3AADC3D829834DB50056ACDE /* DogApiApp.swift in Sources */,
+				3AADC3F7298618AE0056ACDE /* TypesOfView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

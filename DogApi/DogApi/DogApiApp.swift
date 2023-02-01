@@ -11,7 +11,7 @@ import SwiftUI
 struct DogApiApp: App {
     var body: some Scene {
         WindowGroup {
-            AllDogsView()
+            TypesOfView()
         }
     }
 }

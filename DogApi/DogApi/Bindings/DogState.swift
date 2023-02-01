@@ -14,13 +14,19 @@ class DogState: ObservableObject {
     @Published var isLoading: Bool = true
     @Published var error: ErrorModel?
     @Published var images: [UIImage]?
+
+    let typeOfView: TypesOfViews
     
-    func getDogApiResponse() {
+    init(typeOfView: TypesOfViews) {
+        self.typeOfView = typeOfView
+    }
+    
+    func getDogApiResponse(){
         self.dogModel = nil
         self.isLoading = true
         self.images = nil
         
-        ApiManager.shared.getDogApiResponse { [weak self] (result) in
+        ApiManager.shared.getDogApiResponse(type: self.typeOfView) { [weak self] (result) in
             guard let self = self else { return }
             
             switch result {
