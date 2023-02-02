@@ -39,7 +39,7 @@ struct AllDogsView: View {
                 }
             }
         }.onAppear(perform: self.dogImageList.getDogApiResponse)
-            .navigationTitle("Photos of Dogs")
+            .navigationTitle(Localized(.allDogsViewTitle))
     }
 }
 
@@ -53,9 +53,11 @@ struct LoadingView: View {
             .stroke(lineWidth: 4)
             .frame(width: 50, height: 50)
             .rotationEffect(.degrees(isAnimating ? 360 : 0))
-            .animation(Animation.linear(duration: 1).repeatForever(autoreverses: false))
+            .animation(Animation.linear(duration: 1)
+                .repeatForever(autoreverses: false))
             .onAppear {
                 self.isAnimating = true
             }
+        Text(Localized(.loading))
     }
 }

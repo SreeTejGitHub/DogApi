@@ -13,12 +13,10 @@ class ApiManager {
     func getDogApiResponse(type: TypesOfViews, completion: @escaping (Result<DogModel, ErrorModel>) -> ()) {
         var url = ""
         switch type {
-        case .allDogs:
-            url = "https://dog.ceo/api/breed/hound/images"
-        case .random:
-            url = "https://dog.ceo/api/breed/hound/images/random"
         case .numberOfDogs(let number):
-            url = "https://dog.ceo/api/breed/hound/images/random/\(number)"
+            url = String(format: Endpoint.DogsApi.randomDogs, number)
+        default:
+            url = Endpoint.DogsApi.allDogs
         }
         guard let url = URL(string: url) else {
             self.executeCompletionHandler(with: .failure(.invalidEndpoint), completion: completion)

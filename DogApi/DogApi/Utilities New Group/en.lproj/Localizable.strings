@@ -1,0 +1,19 @@
+//
+//  Localizable.swift
+//  DogApi
+//
+//  Created by Sree Tej Peddaiahgari on 2/1/23.
+//
+
+
+// General Texts
+Loading                 = "Loading...";
+
+// Home Texts
+Home_Title              = "Fetch photos of:";
+Type_Of_View_1          = "All Dogs";
+Type_Of_View_2          = "3 Random Dogs";
+
+// AllDogsView
+All_Dogs_View_Title     = "Photos of Dogs";
+

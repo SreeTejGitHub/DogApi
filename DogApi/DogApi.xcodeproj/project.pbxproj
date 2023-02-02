@@ -16,6 +16,9 @@
 		3AADC3F02983629C0056ACDE /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AADC3EF2983629C0056ACDE /* ErrorModel.swift */; };
 		3AADC3F229836B200056ACDE /* DogState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AADC3F129836B200056ACDE /* DogState.swift */; };
 		3AADC3F7298618AE0056ACDE /* TypesOfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AADC3F6298618AE0056ACDE /* TypesOfView.swift */; };
+		3AADC402298B4FB20056ACDE /* LocalizedAppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AADC401298B4FB20056ACDE /* LocalizedAppStrings.swift */; };
+		3AADC40A298B51620056ACDE /* Localizable.strings in Sources */ = {isa = PBXBuildFile; fileRef = 3AADC40C298B51620056ACDE /* Localizable.strings */; };
+		3AADC40F298B540F0056ACDE /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AADC40E298B540F0056ACDE /* Endpoints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		3AADC3EF2983629C0056ACDE /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		3AADC3F129836B200056ACDE /* DogState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogState.swift; sourceTree = "<group>"; };
 		3AADC3F6298618AE0056ACDE /* TypesOfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesOfView.swift; sourceTree = "<group>"; };
+		3AADC401298B4FB20056ACDE /* LocalizedAppStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedAppStrings.swift; sourceTree = "<group>"; };
+		3AADC40B298B51620056ACDE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3AADC40E298B540F0056ACDE /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 		3AADC3D629834DB50056ACDE /* DogApi */ = {
 			isa = PBXGroup;
 			children = (
+				3AADC400298B4F850056ACDE /* Utilities New Group */,
 				3AADC3D729834DB50056ACDE /* DogApiApp.swift */,
 				3AADC3F329836B2D0056ACDE /* Bindings */,
 				3AADC3EE298362110056ACDE /* Views */,
@@ -114,6 +121,24 @@
 				3AADC3F129836B200056ACDE /* DogState.swift */,
 			);
 			path = Bindings;
+			sourceTree = "<group>";
+		};
+		3AADC400298B4F850056ACDE /* Utilities New Group */ = {
+			isa = PBXGroup;
+			children = (
+				3AADC40D298B53F80056ACDE /* Constants */,
+				3AADC401298B4FB20056ACDE /* LocalizedAppStrings.swift */,
+				3AADC40C298B51620056ACDE /* Localizable.strings */,
+			);
+			path = "Utilities New Group";
+			sourceTree = "<group>";
+		};
+		3AADC40D298B53F80056ACDE /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3AADC40E298B540F0056ACDE /* Endpoints.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,13 +215,27 @@
 				3AADC3F02983629C0056ACDE /* ErrorModel.swift in Sources */,
 				3AADC3EB29834F740056ACDE /* DogModel.swift in Sources */,
 				3AADC3DA29834DB50056ACDE /* AllDogsView.swift in Sources */,
+				3AADC40F298B540F0056ACDE /* Endpoints.swift in Sources */,
 				3AADC3E929834E690056ACDE /* ServiceLayer.swift in Sources */,
 				3AADC3D829834DB50056ACDE /* DogApiApp.swift in Sources */,
+				3AADC402298B4FB20056ACDE /* LocalizedAppStrings.swift in Sources */,
+				3AADC40A298B51620056ACDE /* Localizable.strings in Sources */,
 				3AADC3F7298618AE0056ACDE /* TypesOfView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3AADC40C298B51620056ACDE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AADC40B298B51620056ACDE /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3AADC3E129834DB60056ACDE /* Debug */ = {
